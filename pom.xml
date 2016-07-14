@@ -8,7 +8,9 @@
   <packaging>jar</packaging>
 
   <name>simple-project</name>
-
+  <scm>
+    <connection>scm:git:https://github.com/mickbozovic/simple-project</connection>
+  </scm>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
