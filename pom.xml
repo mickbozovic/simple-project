@@ -3,7 +3,7 @@
 
   <groupId>org.sonatype.nexus.examples</groupId>
   <artifactId>simple-project</artifactId>
-  <version>2.0.9-SNAPSHOT</version>
+  <version>2.0.12-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>simple-project</name>
@@ -20,7 +20,7 @@
   </properties>
   <distributionManagement>
     <repository>
-      <id>nexus</id>
+      <id>nexus1</id>
       <name>Nexus Releases</name>
       <url>http://192.168.99.100:32768/content/repositories/releases</url>
     </repository>
@@ -62,7 +62,9 @@
          <configuration>
             <tagNameFormat>v@{project.version}</tagNameFormat>
             <autoVersionSubmodules>true</autoVersionSubmodules>
+            <!--
             <releaseProfiles>releases</releaseProfiles>
+          -->
          </configuration>
       </plugin>
     </plugins>
@@ -210,7 +212,7 @@
                     </execution>
                  </executions>
                  <configuration>
-                    <serverId>nexus</serverId>
+                    <serverId>nexus1</serverId>
                     <nexusUrl>http://192.168.99.100:32768/content/repositories/releases</nexusUrl>
                     <skipStaging>true</skipStaging>
                  </configuration>
